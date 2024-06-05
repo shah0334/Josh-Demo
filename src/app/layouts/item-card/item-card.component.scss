@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+img {
+    width: 20%;
+}
+
+ion-card {
+    padding: 10px;
+}

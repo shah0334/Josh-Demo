@@ -15,7 +15,7 @@ export class ItemCardComponent  implements OnInit {
   @Input() item: Item = {
     name: 'Sony XBR75X900F',
     description: '75" Class HDR UHD Smart LED TV',
-    imageUrl: 'https://ionicframework.com/docs/img/demos/card-media.png',
+    imageUrl: '/assets/images/item-img.avif',
     quantity: 1,
     price: 2503,
     attachments: []
