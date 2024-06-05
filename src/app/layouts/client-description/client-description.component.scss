@@ -4,6 +4,45 @@
     justify-content: space-between;
 }
 
-ion-card {
-    margin: 0px;
+.text-dark h1 {
+    color: #000; /* Assuming 'dark' color corresponds to black */
+}
+
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-clear {
+    background-color: transparent;
+}
+
+.btn-danger {
+    color: #dc3545; /* Bootstrap danger color */
+}
+
+.medium {
+    font-size: 1rem; /* Medium size equivalent */
+}
+
+.card {
+    margin: 0;
+    border-radius: 10px;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Material Design shadow */
+}
+
+.card-content {
+    margin-bottom: 16px;
+}
+
+.icon {
+    margin-left: 4px;
+}
+
+.m-20 {
+    margin-top: 20px;
 }

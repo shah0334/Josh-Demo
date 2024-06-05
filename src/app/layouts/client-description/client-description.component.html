@@ -1,33 +1,20 @@
 <div class="container">
-  <ion-text color="dark">
-    <h1>Client Description</h1>
-  </ion-text>
-
-  <ion-button size="medium" color="danger" fill="clear">Edit</ion-button>
+  <div class="text-dark">
+      <h1>Client Description</h1>
+  </div>
+  <button class="btn btn-clear btn-danger medium">Edit</button>
 </div>
 
-<ion-card>
-  <!-- <ion-card-header>
-    <ion-card-title>Card Title</ion-card-title>
-    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-  </ion-card-header> -->
+<div class="card">
+  <div class="card-content">
+      {{ text | truncatePipe: truncate }}
+  </div>
+  <button class="btn btn-clear btn-danger" (click)="toggleTruncate()">Show {{truncate ? 'More' : 'Less'}}
+      <span class="icon" *ngIf="!truncate">  <i class="red fas fa-angle-up"></i></span> <!-- up arrow -->
+      <span class="icon" *ngIf="truncate">  <i class="red fas fa-angle-down"></i></span> <!-- down arrow -->
+  </button>
+</div>
 
-  <ion-card-content>
-    {{ text | truncatePipe: truncate  }}
-  </ion-card-content>
-
-
-  <ion-button 
-    color="danger"
-    fill="clear" 
-    (click)="toggleTruncate()"
-  >Show {{truncate? 'More' : 'Less'}} 
-  <ion-icon *ngIf="!truncate" name="arrow-up-circle-outline"></ion-icon>
-  <ion-icon *ngIf="truncate" name="arrow-down-circle-outline"></ion-icon>
-  </ion-button>
-</ion-card>
-
-<ion-button fill="clear" color="danger">
-  <ion-icon name="add-sharp"></ion-icon>
-  Add Installer Description
-</ion-button>
+<button class="m-20 btn btn-clear btn-danger">
+  <span class="icon">+</span> Add Installer Description
+</button>
