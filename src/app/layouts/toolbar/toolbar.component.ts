@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { addIcons } from 'ionicons';
+import { ellipsisVertical, ellipsisHorizontal } from 'ionicons/icons'
 
 @Component({
   selector: 'app-toolbar',
@@ -9,12 +11,14 @@ import { IonicModule } from '@ionic/angular';
   standalone: true,
   imports: [IonicModule, CommonModule]
 })
-export class ToolbarComponent  implements OnInit {
+export class ToolbarComponent implements OnInit {
 
   @Input() title: string = 'Living Room';
 
-  constructor() { }
+  constructor() {
+    addIcons({ ellipsisHorizontal, ellipsisVertical })
+  }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
 }

@@ -1,0 +1,33 @@
+<div class="container">
+  <ion-text color="dark">
+    <h1>Client Description</h1>
+  </ion-text>
+
+  <ion-button size="medium" color="danger" fill="clear">Edit</ion-button>
+</div>
+
+<ion-card>
+  <!-- <ion-card-header>
+    <ion-card-title>Card Title</ion-card-title>
+    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+  </ion-card-header> -->
+
+  <ion-card-content>
+    {{ text | truncatePipe: truncate  }}
+  </ion-card-content>
+
+
+  <ion-button 
+    color="danger"
+    fill="clear" 
+    (click)="toggleTruncate()"
+  >Show {{truncate? 'More' : 'Less'}} 
+  <ion-icon *ngIf="!truncate" name="arrow-up-circle-outline"></ion-icon>
+  <ion-icon *ngIf="truncate" name="arrow-down-circle-outline"></ion-icon>
+  </ion-button>
+</ion-card>
+
+<ion-button fill="clear" color="danger">
+  <ion-icon name="add-sharp"></ion-icon>
+  Add Installer Description
+</ion-button>

@@ -1,0 +1,50 @@
+ion-radio::part(container) {
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #444;
+}
+
+ion-radio:nth-child(1)::part(container) {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+ion-radio:nth-child(3)::part(container) {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+ion-radio::part(mark) {
+    display: none;
+}
+
+ion-radio::part(label) {
+    width: 100%;
+    text-align: center;
+    z-index: 9999;
+
+}
+
+ion-radio.radio-checked::part(container) {
+    background-color: gray;
+    border-color: transparent;
+}
+
+ion-radio.radio-checked::part(mark) {
+    width: 6px;
+    height: 10px;
+
+    border-width: 0px 2px 2px 0px;
+    border-style: solid;
+    border-color: #fff;
+
+    transform: rotate(45deg);
+}
+
+ion-radio-group {
+    padding: 20px 0px;
+}
