@@ -5,4 +5,30 @@
 .container {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  p {
+    height: 23px;
+    width: 145px;
+    color: #262626;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: -0.32px;
+    line-height: 18px;
+  }
+
+  p.total {
+    text-align: left;
+  }
+
+  p.price {
+    text-align: right;
+  }
 }

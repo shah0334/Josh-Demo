@@ -6,9 +6,17 @@
       <ion-text color="dark">
         <h1>Items</h1>
       </ion-text>
-      <app-item-card></app-item-card>
+      <app-item-card *ngFor="let item of items" [item]="item"></app-item-card>
+   
+      <div class="total">
+        <p class="total">Living Room Total</p>
+        <p class="price">$ {{getTotal(items) | number: '1.2'}}</p>
+      </div>
     </div>
 
+  
+  
   </div>
+
 
   <app-footer></app-footer>

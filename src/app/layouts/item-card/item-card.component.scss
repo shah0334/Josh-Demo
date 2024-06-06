@@ -112,7 +112,7 @@
   }
   
   .attachments {
-    display: contents;
+    display: block;
     margin-top: 20px;
     padding: 10px;
     background-color: #fafafa;
@@ -128,3 +128,55 @@
     padding: 20px;
     margin-top: 10px;
   }
+
+  .select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px 40px 10px 20px;
+    /* Adjust padding for left text and right icon */
+    border: 1px solid #F6F6F7;
+    border-radius: 25px;
+    background-color: #F6F6F7;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    // width: 200px; /* Adjust width as needed */
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select-wrapper .arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* Prevent the arrow from blocking the select element */
+    color: #333;
+}
+
+select {
+    --content: 'Qty 1';
+}
+
+select:before {
+    content: var(--content);
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* Prevent the text from blocking the select element */
+    color: transparent;
+    /* Hide the original text */
+    white-space: nowrap;
+}

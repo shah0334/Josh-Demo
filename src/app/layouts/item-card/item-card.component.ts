@@ -13,19 +13,30 @@ import { Item } from 'src/app/models/item.model';
 })
 export class ItemCardComponent  implements OnInit {
 
-  @Input() item: Item = {
-    name: 'Sony XBR75X900F',
-    description: '75" Class HDR UHD Smart LED TV',
-    imageUrl: '/assets/images/item-img.avif',
-    quantity: 1,
-    price: 2503,
-    attachments: []
-  }
+  @Input() item: Item | undefined;
+
+  showAttachments: boolean = false;
   constructor() { }
 
   ngOnInit() {}
 
+  toggleAttachment() {
+    this.showAttachments = !this.showAttachments;
+  }
   // onSelectChange(element: HTMLSelectElement) {
   //   element.style.setProperty('--content', `'Qty ' "${element.value}`)
+  // }
+  // toggleExpandableSection() {
+  //   const attachments = document.getElementById('attachments');
+  //   const expandBtn = document.querySelector('.expand-btn i');
+  //   if (attachments.style.display === 'none' || attachments.style.display === '') {
+  //     attachments.style.display = 'block';
+  //     expandBtn.classList.remove('fa-angle-down');
+  //     expandBtn.classList.add('fa-angle-up');
+  //   } else {
+  //     attachments.style.display = 'none';
+  //     expandBtn.classList.remove('fa-angle-up');
+  //     expandBtn.classList.add('fa-angle-down');
+  //   }
   // }
 }
