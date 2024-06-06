@@ -1,50 +1,120 @@
-ion-radio::part(container) {
-    width: 50px;
-    height: 30px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px;
+    height: 108px;
+  }
+
+  .toolbar .back-button,
+  .toolbar .menu-button {
+    color: #ff3333;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .toolbar .title {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+  }
+
+  .radio-group {
+    padding: 20px 0;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .radio-item {
+    display: flex;
+    justify-content: center;
+    position: relative;
     background-color: #444;
-}
+    margin: 10px 0;
+    color: white;
+    width: 117px;
+  }
 
-ion-radio:nth-child(1)::part(container) {
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
-}
-
-ion-radio:nth-child(3)::part(container) {
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
-}
-
-ion-radio::part(mark) {
+  .radio-item input[type="radio"] {
     display: none;
-}
+  }
 
-ion-radio::part(label) {
+  .radio-item label {
+    display: block;
     width: 100%;
     text-align: center;
-    z-index: 9999;
+    padding: 10px 0;
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+  }
 
-}
+  .radio-item:first-child {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    // border-right: 1px var(--gray) solid;
 
-ion-radio.radio-checked::part(container) {
-    background-color: gray;
-    border-color: transparent;
-}
+  }
 
-ion-radio.radio-checked::part(mark) {
+  .radio-item:first-child:after {
+    content: "";
+    background: var(--gray);
+    position: absolute;
+    top: 25%;
+    right: 3px;
+    height: 50%;
+    width: 1px;
+  }
+
+  .radio-item:last-child {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    // border-left: 1px var(--gray) solid;
+  }
+
+  .radio-item:last-child:before {
+    content: "";
+    background: var(--gray);
+    position: absolute;
+    top: 25%;
+    left: 3px;
+    height: 50%;
+    width: 1px;
+  }
+
+  .radio-item input[type="radio"]:checked + label {
+    background-color: var(--light-gray);
+    border-radius: 100px;
+  }
+
+  .radio-item input[type="radio"]:checked + label::after {
+    content: '';
+    display: none;
     width: 6px;
     height: 10px;
-
-    border-width: 0px 2px 2px 0px;
-    border-style: solid;
-    border-color: #fff;
-
+    border: 2px solid #fff;
+    border-width: 0 2px 2px 0;
     transform: rotate(45deg);
-}
-
-ion-radio-group {
-    padding: 20px 0px;
-}
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .red {
+    color:  var(--red);
+    font-size: 30px;
+  }

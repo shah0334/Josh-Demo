@@ -1,4 +1,33 @@
-ion-tabs {
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.tabs {
     position: sticky;
-    bottom: 0px;
+    bottom: 0;
+    width: 100%;
+    background-color: #27272A; /* Dark background color */
+    color: var(--gray); /* Light text color */;
+    height: 72px;
+}
+
+.tab-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.tab {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.gray {
+    font-size: 20px;
+    color: var(--gray);
 }

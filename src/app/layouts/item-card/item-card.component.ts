@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { FormGroup, FormsModule } from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
 import { Item } from 'src/app/models/item.model';
 
@@ -8,7 +9,7 @@ import { Item } from 'src/app/models/item.model';
   templateUrl: './item-card.component.html',
   styleUrls: ['./item-card.component.scss'],
   standalone: true,
-  imports: [CommonModule, IonicModule]
+  imports: [CommonModule, IonicModule, FormsModule]
 })
 export class ItemCardComponent  implements OnInit {
 
@@ -24,4 +25,7 @@ export class ItemCardComponent  implements OnInit {
 
   ngOnInit() {}
 
+  // onSelectChange(element: HTMLSelectElement) {
+  //   element.style.setProperty('--content', `'Qty ' "${element.value}`)
+  // }
 }

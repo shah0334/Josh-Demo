@@ -1,20 +1,23 @@
-<ion-toolbar color="dark">
-  <ion-buttons slot="start">
-    <ion-back-button color="danger" text="" default-href="#"></ion-back-button>
-  </ion-buttons>
+<div class="toolbar">
+  <i class="red fas fa-angle-left"></i>
+  <div class="title">{{title}}</div>
+  <button class="menu-button">  <i class="red fas fa-ellipsis-v"></i></button>
+</div>
 
-  <ion-buttons slot="end">
-    <ion-button>
-      <ion-icon color="danger" slot="icon-only" ios="ellipsis-vertical" md="ellipsis-vertical"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title >{{title}}</ion-title>
-</ion-toolbar>
+<div class="radio-buttons">
+  <div class="radio-group">
+    <div class="radio-item">
+      <input type="radio" id="option1" name="options" value="1">
+      <label for="option1">Option 1</label>
+    </div>
+    <div class="radio-item">
+      <input type="radio" id="option2" name="options" value="2">
+      <label for="option2">Option 2</label>
+    </div>
+    <div class="radio-item">
+      <input type="radio" id="option3" name="options" value="3">
+      <label for="option3">Option 3</label>
+    </div>
+  </div>
+</div>
 
-<ion-radio-group color="dark" value="start">
-  <ion-item color="dark">
-    <ion-radio value="1" justify="start">Option 1</ion-radio>
-    <ion-radio value="2" justify="start">Option 2</ion-radio>
-    <ion-radio value="3" justify="start">Option 3 </ion-radio>
-  </ion-item>
-</ion-radio-group>

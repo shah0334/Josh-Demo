@@ -1,12 +1,14 @@
-<ion-content [fullscreen]="true">
-  <app-toolbar></app-toolbar>
-  <div id="container">
-    <app-client-description></app-client-description>
+  <div class="container">
+    <app-toolbar></app-toolbar>
+    <div id="container">
+      <app-client-description></app-client-description>
+  
+      <ion-text color="dark">
+        <h1>Items</h1>
+      </ion-text>
+      <app-item-card></app-item-card>
+    </div>
 
-    <ion-text color="dark">
-      <h1>Items</h1>
-    </ion-text>
-    <app-item-card></app-item-card>
   </div>
+
   <app-footer></app-footer>
-</ion-content>
