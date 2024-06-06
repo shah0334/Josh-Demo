@@ -1,13 +1,13 @@
-<ion-card>
+<!-- <ion-card>
   <div class="header">
     <img [src]="item.imageUrl" />
     <div class="details">
       <p class="name">{{item.name}}</p>
       <p class="description">{{item.description}}</p>
     </div>
-  </div>
+  </div> -->
 
-  <!-- <ion-card-header>
+<!-- <ion-card-header>
     <ion-card-title>{{item.name}}</ion-card-title>
     <ion-card-subtitle>{{item.description}}</ion-card-subtitle>
   </ion-card-header>
@@ -15,4 +15,89 @@
   <ion-card-content>
     {{item.description}}
   </ion-card-content> -->
-</ion-card>
+<!-- </ion-card> -->
+
+
+<div class="card">
+  <div class="header">
+    <img src="../../../assets/images/item-img.avif" alt="Product Image" class="product-image">
+    <div class="details">
+      <p class="custom-item" style="color: #8E8E93;">Custom Item</p>
+      <p class="product-name" style="color:#000000;">Sony XBR75X900F</p>
+      <p class="product-description">75" Class HDR UHD Smart LED TV</p>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="qty"><i class="fa fa-angle-right"></i> Qty 1</div>
+    <div class="price">$1,504.00</div>
+    <div class="options">•••</div>
+  </div>
+  <p class="profit">50.4% Profit</p>
+  <div class="order-links">
+    <a href="#" style="color: #4E86FA;">Change Order 1</a>
+    <a href="#" style="color: #8C33E7;">Change Order 2</a>
+    <a href="#" style="color: #22C1B0;">Change Order 3</a>
+  </div>
+
+</div>
+
+<div>
+  <div class="expandable-section">
+    <button class="expand-btn" onclick="toggleExpandableSection()">2 Attachments Included <i class="fa fa-angle-down"></i></button>
+    <div class="attachments" id="attachments">
+      <div class="attachment-card">
+        <div class="header">
+          <img src="../../../assets/images/item-img.avif" alt="Product Image" class="product-image">
+          <div class="details">
+            <p class="product-name">Strong SM-T-L</p>
+            <p class="product-description">Strng Mount - Tilt - 36-80" Displays</p>
+          </div>
+        </div>
+
+
+        <div class="footer">
+          <p style="width: 70px; font-size: 12px; padding: 0px ;color: #888;">Recurring tax Exempt</p>
+          <div class="qty"><i class="fa fa-angle-right"></i> Qty 1</div>
+          <div class="price">$130.00</div>
+          <div class="options">•••</div>
+        </div>
+        <p class="profit">50.4% Profit</p>
+      </div>
+      <div class="attachment-card">
+        <div class="header">
+          <img src="../../../assets/images/item-img.avif" alt="Product Image" class="product-image">
+          <div class="details">
+            <p class="product-name">Labor Item</p>
+            <p class="product-description">Sony XBR75X900F</p>
+          </div>
+        </div>
+        <div class="footer">
+          <p style="width: 70px; font-size: 12px; padding: 0px ;color: #888;">Recurring tax Exempt</p>
+          <div class="qty"><i class="fa fa-angle-right"></i> Qty 1</div>
+          <div class="price">$130.00</div>
+          <div class="options">•••</div>
+        </div>
+        <p class="profit">50.4% Profit</p>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<script>
+  function toggleExpandableSection() {
+    const attachments = document.getElementById('attachments');
+    const expandBtn = document.querySelector('.expand-btn i');
+    if (attachments.style.display === 'none' || attachments.style.display === '') {
+      attachments.style.display = 'block';
+      expandBtn.classList.remove('fa-angle-down');
+      expandBtn.classList.add('fa-angle-up');
+    } else {
+      attachments.style.display = 'none';
+      expandBtn.classList.remove('fa-angle-up');
+      expandBtn.classList.add('fa-angle-down');
+    }
+  }
+</script>
+
+<!-- 
+<app-item-card [item]="yourItem"></app-item-card> -->
